@@ -77,9 +77,6 @@ section.hi_pavan {
   align-items: center;
 }
 
-.hi_pavan {
-}
-
 .pavan {
   display: flex;
   justify-content: space-between;
@@ -131,9 +128,6 @@ div.resume {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-}
-
-section.information {
 }
 
 div.position {
@@ -275,6 +269,7 @@ div.icon {
   gap: 80px;
   margin-bottom: 140px;
 }
+
 .projects {
   width: 176px;
   height: 26px;
@@ -445,31 +440,47 @@ div > a {
   color: #666;
 }
 @media (max-width: 1200px) {
-  .pavan {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    width: 60%;
+  header {
+    width: 100%;
+    height: auto;
   }
 }
 
 @media (max-width: 992px) {
+  header {
+    width: 100%;
+    height: auto;
+  }
+  .container {
+    justify-content: flex-start;
+    gap: 140px;
+  }
   .pavan {
+    gap: 20px;
+  }
+  .technologies_list {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
+  }
+  div.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 @media (max-width: 767px) {
   .pavan {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: auto;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+  body {
+    width: 100%;
+    height: auto;
   }
 }
