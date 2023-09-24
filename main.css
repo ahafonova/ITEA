@@ -356,6 +356,41 @@ div.preview_code > div > p {
 div.expirience_block > p {
   padding-left: 28px;
 }
+.mail_us {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.questions {
+  width: 890px;
+  height: 70px;
+  color: #1e0e62;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: -1px;
+  margin-left: 170px;
+}
+
+.e_mail {
+  width: 716px;
+  height: 86px;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: -1px;
+  background: var(
+    --Gradient-Heading,
+    linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 270px;
+}
 
 .footer {
   margin-bottom: 70px;
