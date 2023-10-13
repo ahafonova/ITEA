@@ -3,12 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --var-body-bg: #fff;
+  --var-body-fc: #666;
+  --var-meet-fc: #42446e;
+  --var-title-fc: #000;
+  --var-description-fc: #666;
+  --var-expirience-bg: #fff;
+  --var-questions-fc: #1e0e62;
+  --var-previev-fc: #000;
+  --var-switch-bg: #666;
+}
+[dark] {
+  --var-body-bg: #191919;
+  --var-body-fc: #ccc;
+  --var-meet-fc: #d9d9d9;
+  --var-title-fc: #cccccc;
+  --var-description-fc: #cccccc;
+  --var-expirience-bg: #363636;
+  --var-questions-fc: #d9d9d9;
+  --var-previev-fc: #fff;
+  --var-switch-bg: #a855f7;
+}
 
 body {
   width: 1193px;
   font-family: Poppins;
   font-style: normal;
   margin: auto;
+  background-color: var(--var-body-bg);
+  color: var(--var-body-fc);
 }
 
 main {
@@ -24,7 +48,7 @@ main {
   align-items: center;
   top: 0;
   z-index: 100;
-  background-color: #fff;
+  background-color: var(--var-body-bg);
 }
 
 .logo_header {
@@ -41,12 +65,12 @@ header nav ul {
 }
 li > a {
   text-decoration: none;
-  color: #666;
   text-align: center;
   font-family: DM Sans;
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
+  color: var(--var-body-fc);
 }
 
 li .nav_botton {
@@ -87,7 +111,7 @@ section.hi_pavan {
 .meet_block {
   width: 636px;
   height: 297px;
-  color: var(--Solid-Heading, #42446e);
+  color: var(--var-meet-fc);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 58px;
   font-weight: 700;
@@ -95,10 +119,7 @@ section.hi_pavan {
   letter-spacing: -1px;
 }
 span {
-  background: var(
-    --Gradient-Heading,
-    linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%)
-  );
+  background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -113,7 +134,7 @@ p > img {
   height: 58px;
 }
 div.resume {
-  color: #42446e;
+  color: var(--var-meet-fc);
   font-size: 42px;
   font-weight: 700;
   line-height: 52px;
@@ -124,7 +145,6 @@ div.resume {
 
 .about_me_text {
   width: 708px;
-  color: var(--dark-content, #666);
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
@@ -133,14 +153,13 @@ div.resume {
 div.position {
   width: 627px;
   height: 28px;
-  color: var(--dark-content, #666);
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 1px;
 }
 div.time {
-  color: var(--Button-text, #018c0f);
+  color: #018c0f;
   text-align: center;
   font-size: 9px;
   font-weight: 600;
@@ -160,7 +179,7 @@ div.experience > div > img {
 div.company {
   width: 269.333px;
   height: 17px;
-  color: var(--light-Content, #a7a7a7);
+  color: #a7a7a7;
   font-size: 12px;
   font-weight: 500;
   line-height: 28px;
@@ -169,7 +188,7 @@ div.company {
 div.city {
   width: 100px;
   height: 17px;
-  color: var(--light-Content, #a7a7a7);
+  color: #a7a7a7;
   font-size: 12px;
   font-weight: 500;
   line-height: 28px;
@@ -179,7 +198,7 @@ div.city {
 div.period {
   width: 194.667px;
   height: 17px;
-  color: var(--light-Content, #a7a7a7);
+  color: #a7a7a7;
 
   font-size: 12px;
 
@@ -243,7 +262,7 @@ div.icon {
 .tech_stack {
   width: 311px;
   height: 26px;
-  color: var(--Solid-Heading, #42446e);
+  color: var(--var-meet-fc);
   font-size: 42px;
   font-weight: 700;
   line-height: 26px;
@@ -253,7 +272,6 @@ div.icon {
 .my_technologies {
   width: 450px;
   height: 26px;
-  color: var(--dark-content, #666);
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
@@ -293,7 +311,7 @@ div.technologies_list_description > div {
 p.title {
   width: 305px;
   height: 26px;
-  color: #000;
+  color: var(--var-title-fc);
   text-align: center;
   font-size: 26px;
   font-weight: 500;
@@ -305,7 +323,7 @@ p.title {
 .work_description {
   width: 314px;
   height: 130px;
-  color: var(--dark-content, #666);
+  color: var(--var-description-fc);
   font-size: 16px;
   font-weight: 300;
   line-height: 26px;
@@ -313,7 +331,7 @@ p.title {
 }
 
 .skills {
-  color: var(--Solid-Heading, #42446e);
+  color: var(--var-meet-fc);
   font-size: 14px;
   font-weight: 300;
   line-height: 26px;
@@ -325,6 +343,7 @@ p.title {
   align-items: center;
   gap: 65px;
   padding-left: 20px;
+  color: var(--var-previev-fc);
 }
 
 .preview {
@@ -338,8 +357,8 @@ p.title {
   align-items: center;
   gap: 12px;
 }
+
 div.preview_code > div > p {
-  color: #000;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -350,7 +369,7 @@ div.preview_code > div > p {
   width: 373px;
   height: 577px;
   border-radius: 20px;
-  background: #fff;
+  background: var(--var-expirience-bg);
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
 }
 div.expirience_block > p {
@@ -363,7 +382,7 @@ div.expirience_block > p {
 .questions {
   width: 890px;
   height: 70px;
-  color: #1e0e62;
+  color: var(--var-questions-fc);
   text-align: center;
   font-family: DM Sans;
   font-size: 58px;
@@ -382,10 +401,7 @@ div.expirience_block > p {
   font-weight: 700;
   line-height: 70px;
   letter-spacing: -1px;
-  background: var(
-    --Gradient-Heading,
-    linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%)
-  );
+  background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -415,6 +431,7 @@ div.contacts {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+  color: var(--var-body-fc);
 }
 
 .footer_line {
@@ -428,7 +445,7 @@ div.contacts {
   align-items: center;
   justify-content: space-between;
   gap: 52px;
-  color: var(--Solid-Heading, #42446e);
+  color: var(--var-meet-fc);
   font-family: DM Sans;
   font-size: 18px;
   font-weight: 400;
@@ -436,19 +453,16 @@ div.contacts {
 }
 
 .design {
-  color: var(--dark-content, #666);
   text-align: center;
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
+  color: var(--var-meet-fc);
 }
 
 div.design > span {
-  background: var(
-    --Gradient-Heading,
-    linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%)
-  );
+  background: var linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -458,7 +472,7 @@ div.design > span {
 }
 
 .phone {
-  color: var(--Solid-Heading, #42446e);
+  color: #42446e;
   font-family: DM Sans;
   font-size: 18px;
   font-weight: 400;
@@ -474,6 +488,61 @@ div > a {
   text-decoration: none;
   color: #666;
 }
+
+.dark_mode {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
+}
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 54px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: var(--var-switch-bg);
+}
+
+.switch-input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.switch-slider::before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch-input:checked + .switch-slider {
+  background-color: #fff;
+}
+
+.switch-input:checked + .switch-slider::before {
+  transform: translateX(25px);
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+}
+
 @media (max-width: 1200px) {
   header {
     width: 100%;

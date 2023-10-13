@@ -21,12 +21,22 @@
     />
     <title>Task1</title>
   </head>
+  <script>
+    const handlechange = (ischecked) => {
+      if (ischecked) {
+        document.body.setAttribute ('dark', '');
+      }
+      else {
+        document.body.removeAttribute ('dark');
+      }
+    }
+  </script>
   <body>
     <header id="home">
       <div class="container">
         <div class="logo_header">
           <div>
-            <img src="./img/header/logo 1.svg" alt="logo" />
+            <img src="./img/header/logo 1 (2).svg" alt="logo" />
           </div>
         </div>
         <div class="navigation">
@@ -60,6 +70,12 @@
               /></a>
             </div>
           </div>
+          <div class="dark_mode">Dark mode
+           <label class="switch">
+            <input type="checkbox" class="switch-input" onchange="handlechange(this.checked)">
+            <span class="switch-slider"></span>
+          </label>
+         </div>
         </div>
       </div>
     </header>
